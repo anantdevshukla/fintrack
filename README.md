@@ -62,7 +62,3 @@ The app uses standard keys to write, read, and manage states in the browser's Lo
 * `currency` - Currency view configuration: `"USD"` / `"EUR"` / `"GBP"` / `"INR"` / `"JPY"`
 * `profile` - Current user name display configuration
 
----
-
-
-   ```
