@@ -64,12 +64,5 @@ The app uses standard keys to write, read, and manage states in the browser's Lo
 
 ---
 
-## Local Development & Setup
 
-1. Clone or download the repository directory.
-2. Open `login.html` in any modern web browser.
-3. For the best experience (including hot reloading), serve the directory using a local development server (e.g., Live Server extension in VS Code):
-   ```bash
-   # Using local npm servers
-   npx serve .
    ```
