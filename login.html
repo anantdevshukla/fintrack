@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack Pro – Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body class="light-theme">
+    <div class="auth-container">
+        <div class="auth-card" id="auth-card">
+            <div class="auth-brand">
+                <div class="logo-box">
+                    <i data-lucide="layers" class="brand-icon"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">FinTrack Pro</span>
+                    <span class="brand-sub">Enterprise Finance</span>
+                </div>
+            </div>
+
+            <div class="auth-view active" id="login-view">
+                <div class="auth-header">
+                    <h2>Welcome Back</h2>
+                    <p class="subtitle">Access your personal finance manager</p>
+                </div>
+
+                <div class="validation-error text-center" id="global-login-error" style="margin-bottom: 16px;"></div>
+
+                <form id="login-form" novalidate>
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" class="form-control" placeholder="Enter your username" autocomplete="username" required>
+                        <span class="validation-error" id="error-login-username">Username is required</span>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 16px;">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" class="form-control" placeholder="••••••••" autocomplete="current-password" required>
+                        <span class="validation-error" id="error-login-password">Password is required</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="btn-login" style="margin-top: 24px;">
+                        <span>Login</span>
+                    </button>
+                </form>
+
+                <div class="auth-footer" style="margin-top: 24px; text-align: center;">
+                    <p>Don't have an account? <a href="#" id="link-to-register">Register here</a></p>
+                </div>
+            </div>
+
+            <div class="auth-view" id="register-view">
+                <div class="auth-header">
+                    <h2>Create Account</h2>
+                    <p class="subtitle">Join FinTrack Pro and manage your savings</p>
+                </div>
+
+                <form id="register-form" novalidate>
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" class="form-control" placeholder="e.g., janedoe" autocomplete="username" required>
+                        <span class="validation-error" id="error-register-username">Username is required</span>
+                    </div>
+
+
+                    <div class="grid-2-col" style="margin-top: 12px;">
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" class="form-control" placeholder="••••••••" autocomplete="new-password" required>
+                            <span class="validation-error" id="error-register-password">Min 6 characters</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-confirm">Confirm Password</label>
+                            <input type="password" id="register-confirm" class="form-control" placeholder="••••••••" autocomplete="new-password" required>
+                            <span class="validation-error" id="error-register-confirm">Passwords must match</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="btn-register" style="margin-top: 24px;">
+                        <span>Register</span>
+                    </button>
+                </form>
+
+                <div class="auth-footer" style="margin-top: 24px; text-align: center;">
+                    <p>Already have an account? <a href="#" id="link-to-login">Back to Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
